@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laufey · Laufey 的音乐世界</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif+SC:wght@400;600&family=Noto+Sans+SC:wght@300;400&family=Dancing+Script:wght@400&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 首屏欢迎页 -->
+    <div class="welcome-page" id="welcomePage">
+        <div class="hero-slideshow">
+            <div class="hero-slide active" style="background-image: url('images/slide1.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/slide2.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/slide3.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Laufey</h1>
+            <p class="hero-tagline">让音乐温柔地拥抱你</p>
+            <button class="start-btn" id="startBtn">
+                <span class="start-text">开始</span>
+                <span class="start-arrow">→</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 主导航栏（欢迎页消失后显示）-->
+    <nav class="navbar main-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Laufey</a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">关于Laufey</a></li>
+                <li><a href="#music" class="nav-link">专辑作品</a></li>
+                <li><a href="#gallery" class="nav-link">相册</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 关于Laufey -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">关于<span class="brand">Laufey</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about.jpg" alt="Laufey">
+                </div>
+                <div class="about-text">
+                    <p><span class="brand">Laufey</span>（Laufey Lín Jónsdóttir），冰岛华裔歌手、作曲家，两座格莱美奖获得者。</p>
+                    <p>成长于音乐世家，自小学习钢琴与大提琴，十五岁便和冰岛交响乐团同台演出，后来进入伯克利音乐学院深造。</p>
+                    <p>她把古典音乐和复古爵士、现代流行互相融合，温柔醇厚的嗓音打动了无数年轻人。</p>
+                    <p class="about-quote">代表作有《From The Start》《Valentine》等，多首作品火遍全球。她希望把经典的爵士音乐带给新一代听众，同时开启大规模世界巡演，许多场次全部售罄。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专辑作品 -->
+    <section class="music" id="music">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">专辑作品</h2>
+                <div class="section-divider"></div>
+                <p class="section-hint">点击专辑查看歌曲</p>
+            </div>
+            <div class="discography">
+                <div class="disc-item" data-album="from-the-start">
+                    <div class="disc-cover">
+                        <img src="images/typical-of-me.jpg" alt="Typical of Me">
+                    </div>
+                    <div class="disc-info">
+                        <div class="disc-title">Typical of Me</div>
+                        <p class="disc-year">2021</p>
+                    </div>
+                </div>
+                <div class="disc-item" data-album="valentine">
+                    <div class="disc-cover">
+                        <img src="images/everything-i-know-about-love.jpg" alt="Everything I Know About Love">
+                    </div>
+                    <div class="disc-info">
+                        <div class="disc-title"><span class="title-scroll">Everything I Know About Love &nbsp;&nbsp; Everything I Know About Love</span></div>
+                        <p class="disc-year">2022</p>
+                    </div>
+                </div>
+                <div class="disc-item" data-album="bewitched">
+                    <div class="disc-cover">
+                        <img src="images/bewitched.jpg" alt="Bewitched">
+                    </div>
+                    <div class="disc-info">
+                        <div class="disc-title">Bewitched</div>
+                        <p class="disc-year">2023</p>
+                    </div>
+                </div>
+                <div class="disc-item" data-album="a-matter-of-time">
+                    <div class="disc-cover">
+                        <img src="images/a-matter-of-time.jpg" alt="A Matter Of Time">
+                    </div>
+                    <div class="disc-info">
+                        <div class="disc-title"><span class="title-scroll">A Matter Of Time &nbsp;&nbsp; A Matter Of Time</span></div>
+                        <p class="disc-year">2025</p>
+                    </div>
+                </div>
+                <div class="disc-item" data-album="the-final-hour">
+                    <div class="disc-cover">
+                        <img src="images/the-final-hour.jpg" alt="A Matter Of Time: The Final Hour">
+                    </div>
+                    <div class="disc-info">
+                        <div class="disc-title"><span class="title-scroll">A Matter Of Time: The Final Hour &nbsp;&nbsp; A Matter Of Time: The Final Hour</span></div>
+                        <p class="disc-year">2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专辑详情弹窗 -->
+    <div class="album-detail" id="albumDetail">
+        <button class="back-btn" id="backBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            返回
+        </button>
+        <div class="album-detail-content">
+            <div class="album-cover-large" id="albumCoverLarge"></div>
+            <div class="album-info">
+                <h2 id="albumTitle"></h2>
+                <p class="album-year" id="albumYear"></p>
+                <ul class="track-list" id="trackList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 相册 -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">相册</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/1.jpg" alt="演出1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/2.jpg" alt="录音室">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/3.jpg" alt="演出2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/4.jpg" alt="乐器">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/5.jpg" alt="幕后">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/6.jpg" alt="演出3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">联系</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-content">
+                <p class="contact-text">如果你想联系本网页的制作者</p>
+                <p class="contact-text">欢迎通过以下方式找到我</p>
+                <div class="contact-links">
+                    <a href="mailto:zhang_11252012@163.com" class="contact-link contact-link-small" aria-label="邮箱" onclick="copyEmail(event, 'zhang_11252012@163.com')">
+                        <span class="contact-icon">✉</span>
+                        <span>邮箱</span>
+                    </a>
+                </div>
+                <p class="email-tip">(推荐)</p>
+                <div class="contact-links">
+                    <a href="mailto:zhang_11252012@outlook.com" class="contact-link contact-link-small" onclick="copyEmail(event, 'zhang_11252012@outlook.com')">
+                        <span class="contact-icon">✉</span>
+                        <span>备用邮箱</span>
+                    </a>
+                </div>
+                <p class="copy-hint" id="copyHint">点击邮箱可复制邮箱地址</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name"><span class="brand">Laufey</span></p>
+            <p class="footer-slogan">用音符书写温柔的诗</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
